@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="gridview_sticker_size">120dp</dimen>
+    <dimen name="gridview_padding_top">120dp</dimen>
+    <dimen name="gridview_padding_bottom">15dp</dimen>
+    <dimen name="gridview_padding_right_left">20dp</dimen>
+    <dimen name="ss_margin_top">30dp</dimen>
+    <dimen name="selected_sticker_size">200dp</dimen>
 </resources>
