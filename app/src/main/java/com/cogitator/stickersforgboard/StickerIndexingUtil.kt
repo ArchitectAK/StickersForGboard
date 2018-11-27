@@ -3,8 +3,6 @@ package com.cogitator.stickersforgboard
 import android.content.Context
 import android.util.Log
 import android.widget.Toast
-import com.google.android.gms.tasks.OnFailureListener
-import com.google.android.gms.tasks.OnSuccessListener
 import com.google.firebase.appindexing.FirebaseAppIndex
 import com.google.firebase.appindexing.FirebaseAppIndexingInvalidArgumentException
 import com.google.firebase.appindexing.Indexable
@@ -12,7 +10,7 @@ import com.google.firebase.appindexing.builders.Indexables
 import com.google.firebase.appindexing.builders.StickerBuilder
 import java.io.File
 import java.io.IOException
-import java.util.ArrayList
+import java.util.*
 
 /**
  * @author Ankit Kumar on 26/11/2018
@@ -125,7 +123,7 @@ object StickerIndexingUtil {
         val lastIndex = stickerBuilders.size - 1
 
         // user sticker method here
-        val imageUrl = HomeActivity.stickers[lastIndex].getImageUrl()
+        val imageUrl = MainActivity.stickers[lastIndex].getImageUrl()
 
         val stickerPackBuilder = Indexables.stickerPackBuilder()
             .setName(STICKER_PACK_NAME)
@@ -141,7 +139,7 @@ object StickerIndexingUtil {
     }
 
     private fun getStickerFilename(index: Int): String {
-        return HomeActivity.stickers[index].getName()
+        return MainActivity.stickers[index].getName()
     }
 
 }
